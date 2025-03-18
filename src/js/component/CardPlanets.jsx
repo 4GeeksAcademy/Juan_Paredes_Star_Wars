@@ -2,6 +2,9 @@ import React from "react";
 
 import planetData from "../../json/planets.json"
 
+
+
+
 const CardPlanets= ({name,terrain,population,id}) => {
     const peopleImage = planetData.planets.find(p => p.id === id)?.image || "https://via.placeholder.com/300";
     return (
@@ -11,7 +14,10 @@ const CardPlanets= ({name,terrain,population,id}) => {
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">Terrain : {terrain}</p>
                     <p className="card-text">Population: {population}</p>
-                    <a href="#" className="btn btn-primary">Learn more!</a>
+                    <button className="btn btn-primary">Learn more!</button>
+                    <button className="favorite-btn">
+                        <i className="fa-solid fa-heart"></i>
+                    </button>
                 </div>
         </div>
     )

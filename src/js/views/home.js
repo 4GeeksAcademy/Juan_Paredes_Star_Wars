@@ -6,6 +6,7 @@ import CardCharacter from "../component/CardCharacter.jsx";
 import CardPlanets from "../component/CardPlanets.jsx";
 import CardVehicles from "../component/CardVehicles.jsx";
 import Navbar from "../component/Navbar.jsx";
+
 export const Home = () => {
 	const {actions,store}=useContext(Context)
 	useEffect(()=>{

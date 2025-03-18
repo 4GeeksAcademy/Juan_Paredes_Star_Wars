@@ -1,6 +1,9 @@
 import React from "react";
 import peopleData from "../../json/people.json"
 
+
+
+
 const CardCharacter = ({name,hairColor,eyeColor,gender,id}) => {
     const peopleImage = peopleData.people.find(p => p.id === id)?.image || "https://via.placeholder.com/300";
     return (
@@ -12,7 +15,10 @@ const CardCharacter = ({name,hairColor,eyeColor,gender,id}) => {
                     <p className="card-text">Hair Color: {hairColor}</p>
                     <p className="card-text">Eye color : {eyeColor}</p>
                
-                    <a href="#" className="btn btn-primary">Learn more!</a>
+                    <button className="btn btn-primary">Learn more!</button>
+                    <button className="favorite-btn">
+                    <i className="fa-solid fa-heart"></i>
+                     </button>
                 </div>
         </div>
     )
