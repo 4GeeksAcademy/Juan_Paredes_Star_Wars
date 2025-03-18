@@ -21,6 +21,7 @@ export const Home = () => {
 							<CardCharacter
 								key={index}
 								name={personaje.name}
+								hairColor={personaje.hair_color}
 								eyeColor={personaje.eye_color}
 								gender={personaje.gender}
 								id={index}
