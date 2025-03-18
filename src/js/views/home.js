@@ -4,11 +4,13 @@ import "../../styles/home.css";
 import {Context} from "../store/appContext"
 import CardCharacter from "../component/CardCharacter.jsx";
 import CardPlanets from "../component/CardPlanets.jsx";
+import CardVehicles from "../component/CardVehicles.jsx";
 export const Home = () => {
 	const {actions,store}=useContext(Context)
 	useEffect(()=>{
 		actions.getCharacters()
 		actions.getPlanets()
+		actions.getVehicles()
 	},[]);
 	return (
 
@@ -43,6 +45,23 @@ export const Home = () => {
 						))
 					}
 				</div>
+				<h2> Vehicles </h2>
+				<div className="d-flex flex-row overflow-scroll">
+					{
+						store.vehicles.map((vehiculo,index)=>(
+							<CardVehicles
+								key={index}
+								name={vehiculo.name}
+								model={vehiculo.model}
+								manufacturer={vehiculo.manufacturer}
+								id={index}
+							/>
+						))
+					}
+				</div>
+
+
+
 
 
 
