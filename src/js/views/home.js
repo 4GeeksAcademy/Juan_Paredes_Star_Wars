@@ -3,10 +3,12 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import {Context} from "../store/appContext"
 import CardCharacter from "../component/CardCharacter.jsx";
+import CardPlanets from "../component/CardPlanets.jsx";
 export const Home = () => {
 	const {actions,store}=useContext(Context)
 	useEffect(()=>{
 		actions.getCharacters()
+		actions.getPlanets()
 	},[]);
 	return (
 
@@ -27,6 +29,20 @@ export const Home = () => {
 					}
 				</div>
 				<h2> Planets </h2>
+				<div className="d-flex flex-row overflow-scroll">
+					{
+						store.planets.map((planeta,index)=>(
+							<CardPlanets
+								key={index}
+								name={planeta.name}
+								terrain={planeta.terrain}
+								population={planeta.population}
+								id={index}
+							/>
+						))
+					}
+				</div>
+
 
 
 		</div>
