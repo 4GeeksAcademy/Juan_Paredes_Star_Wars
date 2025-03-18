@@ -12,7 +12,7 @@ const CardCharacter = ({name,hairColor,eyeColor,gender,id}) => {
                     <p className="card-text">Hair Color: {hairColor}</p>
                     <p className="card-text">Eye color : {eyeColor}</p>
                
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                    <a href="#" className="btn btn-primary">Learn more!</a>
                 </div>
         </div>
     )

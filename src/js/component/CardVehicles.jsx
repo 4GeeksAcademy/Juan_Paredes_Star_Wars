@@ -11,7 +11,7 @@ const vehicleImage = vehicleData.vehiculos.find(p => p.id === id)?.image || "htt
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text"> Model : {model}</p>
                     <p className="card-text"> Manufacturer: {manufacturer}</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                    <a href="#" className="btn btn-primary">Learn more!</a>
                 </div>
         </div>
     )

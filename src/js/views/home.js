@@ -1,10 +1,11 @@
 import React, {useContext,useEffect}from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
-import "../../styles/home.css";
+import "../../styles/index.css";
 import {Context} from "../store/appContext"
 import CardCharacter from "../component/CardCharacter.jsx";
 import CardPlanets from "../component/CardPlanets.jsx";
 import CardVehicles from "../component/CardVehicles.jsx";
+import Navbar from "../component/Navbar.jsx";
 export const Home = () => {
 	const {actions,store}=useContext(Context)
 	useEffect(()=>{
@@ -15,7 +16,8 @@ export const Home = () => {
 	return (
 
 		<div className="text-center mt-5">
-			<h1>Star Wars</h1>
+			<Navbar/>
+	
 			<h2> Characters </h2>
 				<div className="d-flex flex-row overflow-scroll">
 					{

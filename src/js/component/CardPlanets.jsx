@@ -11,7 +11,7 @@ const CardPlanets= ({name,terrain,population,id}) => {
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">Terrain : {terrain}</p>
                     <p className="card-text">Population: {population}</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                    <a href="#" className="btn btn-primary">Learn more!</a>
                 </div>
         </div>
     )
