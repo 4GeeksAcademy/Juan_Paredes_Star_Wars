@@ -4,18 +4,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 			characters:[],
 			planets:[],
 			vehicles:[],
-
 		},
 		actions: {
-			
 			getCharacters: async () => {
 				try {
 					const response=  await fetch("https://swapi.dev/api/people")
 					console.log(response)
 					const data=await response.json()
-					console.log(data.results)
-					setStore({characters:data.results})
-					
+					console.log("ESTA ES LA DATAAAAAAAA",data.results)
+					setStore({characters:data.results})					
 				} catch (error) {
 					console.log(error)
 					
@@ -30,7 +27,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					const data=await response.json()
 					console.log(data.results)
 					setStore({planets:data.results})
-					
 				} catch (error) {
 					console.log(error)
 					
@@ -44,10 +40,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.log(response)
 					const data=await response.json()
 					console.log(data.results)
-					setStore({vehicles:data.results})
-					
-
-					
+					setStore({vehicles:data.results})					
 				} catch (error) {
 					console.log(error)
 					

@@ -13,7 +13,7 @@ const CardVehicles = ({ name, model, manufacturer, id }) => {
                 <h5 className="card-title">{name}</h5>
                 <p className="card-text"> Model : {model}</p>
                 <p className="card-text"> Manufacturer: {manufacturer}</p>
-                <button className="btn btn-primary">Learn more!</button>
+                <button className="btn btn-primary"onClick={()=>handlerDetail()}>Learn more!</button>
                 <button className="favorite-btn">
                     <i className="fa-solid fa-heart"></i>
                 </button>

@@ -15,7 +15,7 @@ const CardCharacter = ({name,hairColor,eyeColor,gender,id}) => {
                     <p className="card-text">Hair Color: {hairColor}</p>
                     <p className="card-text">Eye color : {eyeColor}</p>
                
-                    <button className="btn btn-primary">Learn more!</button>
+                    <button className="btn btn-primary" onClick={()=>handlerDetail()}>Learn more!</button>
                     <button className="favorite-btn">
                     <i className="fa-solid fa-heart"></i>
                      </button>
