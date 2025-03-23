@@ -39,7 +39,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					const response=  await fetch("https://swapi.dev/api/starships")
 					console.log(response)
 					const data=await response.json()
-					console.log(data.results)
+					console.log("ESTA ES LA DATA DE LOS VEHICULOS",data.results)
 					setStore({vehicles:data.results})					
 				} catch (error) {
 					console.log(error)
