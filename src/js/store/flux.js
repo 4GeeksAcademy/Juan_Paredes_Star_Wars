@@ -4,6 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			characters:[],
 			planets:[],
 			vehicles:[],
+			favorites:[],
 		},
 		actions: {
 			getCharacters: async () => {
@@ -47,6 +48,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 
 			},
+			addFavorite: (item) => {
+				const store = getStore();
+		
+				const isAlreadyFavorite = store.favorites.some(fav => fav.name === item.name);
+				
+				if (!isAlreadyFavorite) {
+					setStore({ favorites: [...store.favorites, item] });
+				}
+			},
+			removeFavorite: (favName) => {
+				const store = getStore();
+				const updatedFavorites = store.favorites.filter(fav => fav.name !== favName);
+				setStore({ favorites: updatedFavorites });
+			},
+			
+
 
 			
 			

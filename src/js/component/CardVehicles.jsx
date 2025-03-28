@@ -7,7 +7,8 @@ import vehicleData from "../../json/vehiculos.json"
 
 
 
-const CardVehicles = ({ name, model, manufacturer, id }) => {
+const CardVehicles = ({ name, model, manufacturer, id}) => {
+    const { actions } = useContext(Context); 
         const navigate = useNavigate();
     const vehicleImage = vehicleData.vehiculos.find(p => p.id === id)?.image || "https://via.placeholder.com/300";
     const handlerDetail = (id) => {
@@ -21,8 +22,15 @@ const CardVehicles = ({ name, model, manufacturer, id }) => {
                 <p className="card-text"> Model : {model}</p>
                 <p className="card-text"> Manufacturer: {manufacturer}</p>
                 <button className="btn btn-primary"onClick={()=>handlerDetail(id+1)}>Learn more!</button>
-                <button className="favorite-btn">
-                    <i className="fa-solid fa-heart"></i>
+                <button
+                    className="btn btn-outline-warning"
+                    onClick={() => actions.addFavorite({
+                        name:name,
+                        url: `/vehicle/${id+1}`,
+                        type: "Vehicle"
+                    })}
+                >
+                    ❤️
                 </button>
 
             </div>
