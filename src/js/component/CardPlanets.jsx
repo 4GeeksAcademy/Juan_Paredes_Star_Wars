@@ -21,7 +21,7 @@ const CardPlanets = ({ name, terrain, population, id }) => {
                 <h5 className="card-title">{name}</h5>
                 <p className="card-text">Terrain : {terrain}</p>
                 <p className="card-text">Population: {population}</p>
-                <button className="btn btn-primary" onClick={() => handlerDetail(id + 1)} >Learn more!</button>
+                <button className="btn btn-primary" onClick={() => handlerDetail(id+1)} >Learn more!</button>
                 <button
                     className="btn btn-outline-warning"
                     onClick={() => actions.addFavorite({

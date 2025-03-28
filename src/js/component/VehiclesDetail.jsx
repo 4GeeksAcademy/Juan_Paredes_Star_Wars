@@ -17,9 +17,9 @@ const VehiclesDetail = () => {
                 const response = await fetch(`https://swapi.dev/api/starships/${vehicleId}/`);
                 const data = await response.json();
                 setVehicle(data);
-                console.log("esta es la data de fetch",data)
+                console.log("esta es la data de fetch de VEHICLEDETAIL",data)
             } catch (error) {
-                console.error("Error fetching planet:", error);
+                console.error("Error fetching vehicle:", error);
             }
         };
 

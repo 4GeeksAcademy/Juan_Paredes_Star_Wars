@@ -7,7 +7,7 @@ const Navbar = () => {
     const navigate = useNavigate();  // Hook para redirigir al hacer clic en un favorito
 
     return (
-        <nav className="navbar custom-navbar px-3">
+        <nav className="navbar custom-navbar px-3 fixed-top">
             <a className="navbar-brand" href="#">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg" width="80" alt="Star Wars" />
             </a>
